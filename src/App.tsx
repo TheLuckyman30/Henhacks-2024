@@ -4,7 +4,8 @@ import './App.css';
 
 function App() {
   return (
-    <h1 className='App-header'>Hello World</h1>
+    <div className='App-header'><h1>Box to upload file. Select type of dyslexia, show updated text</h1></div>
+  
   );
 }
 
