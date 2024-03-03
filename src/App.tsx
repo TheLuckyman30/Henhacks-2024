@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { DropFile } from "./components/FileDragger";
-import { Changer1 } from "./components/changer1";
+import { MakeUppercase } from "./components/MakeUppercase";
 
 function App() {
   const [isDragOver, setisDragOver] = useState<boolean>(false);
@@ -11,14 +11,14 @@ function App() {
   return (
     <div>
       <div className="App-header" style={{ justifyContent: "flex-start" }}>
-        <Changer1
+        <MakeUppercase
           isDragOver={isDragOver}
           setIsDragOver={setisDragOver}
           file={file}
           setFile={setFile}
           words={words}
           setWords={setWords}
-        ></Changer1>
+        ></MakeUppercase>
         <DropFile
           isDragOver={isDragOver}
           setIsDragOver={setisDragOver}
