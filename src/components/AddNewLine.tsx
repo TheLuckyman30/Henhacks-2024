@@ -10,5 +10,5 @@ export function AddNewLine (props: DropFilesProps) {
         
     }
 
-    return <Button onClick={addLine}>Add a new Line</Button>
+    return <Button onClick={addLine} disabled={props.words === ""}>Add a new Line</Button>
 }
