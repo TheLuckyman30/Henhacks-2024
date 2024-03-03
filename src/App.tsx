@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { DropFile } from "./components/FileDragger"
 
 function App() {
   return (
-    <h1 className='App-header'>Test</h1>
+    <div className='App-header'><DropFile></DropFile></div>
   );
 }
 
