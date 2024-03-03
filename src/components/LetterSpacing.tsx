@@ -10,7 +10,7 @@ export function LetterSpacing() {
     } else {
       const newSpacing = parseInt(event.target.value);
       setSpacing(newSpacing);
-      const wordsElement = document.getElementById("The-words");
+      const wordsElement = document.getElementById("changeText11");
       if (wordsElement) {
         wordsElement.style.letterSpacing = `${newSpacing}px`;
       }
