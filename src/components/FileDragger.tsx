@@ -1,6 +1,6 @@
 import { DragEvent, useState } from "react";
 
-interface DropFilesProps {
+export interface DropFilesProps {
   isDragOver: boolean;
   setIsDragOver: (newIsDragOver: boolean) => void;
   file: File[];
