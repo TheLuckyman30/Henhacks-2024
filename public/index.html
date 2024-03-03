@@ -24,7 +24,38 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  
+    <style>
+        /* Define CSS classes for different fonts */
+        .font1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .font2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .font3 {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+    </head>
+    <body>
+
+        <button onclick="changeFont('font1')" style="background-color: #ffffff3b; width: 70px; height: 40px;" id="changeText7" >Verdana</button>
+        <button onclick="changeFont('font2')" style="background-color: #ffffff3b; width: 70px; height: 40px; " id="changeText8">Helvetica</button>
+        <button onclick="changeFont('font3')" style="background-color: #ffffff3b; width: 70px; height: 40px; " id="changeText9">Courier New</button>
+    
+        <script>
+            function changeFont(fontClass) {
+                document.getElementById('changeText3').className = fontClass;
+                document.getElementById('changeText4').className = fontClass;
+                document.getElementById('changeText6').className = fontClass;
+                document.getElementById('changeText11').className = fontClass;
+
+
+            }
+        </script>
+        <br></br>
+    </body> 
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -66,6 +97,13 @@
             document.getElementById('changeText3').style.color = color;
             document.getElementById('changeText4').style.color = color;
             document.getElementById('changeText6').style.color = color;
+            document.getElementById('changeText7').style.color = color;
+            document.getElementById('changeText8').style.color = color;
+            document.getElementById('changeText9').style.color = color;
+            document.getElementById('changeText11').style.color = color;
+
+
+            
 
             document.documentElement.style.setProperty('--text-color', color);
 
@@ -82,9 +120,12 @@
         <p> </p>
         <script>
             function changeFontSize(fontSize) {
-                document.getElementById('changeText3').style.fontSize = fontSize + 'px';
-                document.getElementById('changeText4').style.fontSize = fontSize + 'px';
-                document.getElementById('changeText6').style.fontSize = fontSize + 'px';
+                document.getElementById('changeText3').style.fontSize = (fontSize) + 'px';
+                document.getElementById('changeText4').style.fontSize = (fontSize) + 'px';
+                document.getElementById('changeText6').style.fontSize = (fontSize) + 'px';
+                document.getElementById('changeText11').style.fontSize = (fontSize) + 'px';
+
+
 
                 document.documentElement.style.setProperty('--font-size', fontSize + 'px');
 
@@ -110,7 +151,16 @@
             
         });
     </script>
+    
 </body>
+
+
+<!--
+      Here down is drawing elements vvv
+
+      note to self: pretty cool way to write comments tbh
+    -->
+
 <title>Canvas Eraser Tool</title>
 <style>
     canvas {
