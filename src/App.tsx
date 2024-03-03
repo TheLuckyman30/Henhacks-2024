@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import { DropFile } from "./components/FileDragger";
 
+
+
 function App() {
   const [isDragOver, setisDragOver] = useState<boolean>(false);
   const [file, setFile] = useState<File[]>([]);
@@ -24,5 +26,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
