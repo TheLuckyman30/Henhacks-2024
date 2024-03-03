@@ -8,14 +8,14 @@ export function MakeLastUpper (props: DropFilesProps) {
 
     function changeText (): void {
         if (!isLastUpper) {
-            const sentences: string[] = props.words.split(".\n\n");
-            const modifiedText = sentences.map((sentence: string): string => changeWord(sentence)).join(".\n\n");
+            const sentences: string[] = props.words.split(".\n");
+            const modifiedText = sentences.map((sentence: string): string => changeWord(sentence)).join(".\n");
             props.setWords(modifiedText);
             setIsLastUpper(true);
         }
         else {
-            const sentences: string[] = props.words.split(".\n\n");
-            const modifiedText = sentences.map((sentence: string): string => changeWord(sentence)).join(".\n\n");
+            const sentences: string[] = props.words.split(".\n");
+            const modifiedText = sentences.map((sentence: string): string => changeWord(sentence)).join(".\n");
             props.setWords(modifiedText);
             setIsLastUpper(false);
         }

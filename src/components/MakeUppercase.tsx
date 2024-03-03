@@ -8,14 +8,14 @@ export function MakeUppercase (props: DropFilesProps) {
 
     function changeText (): void {
         if (!isChanged) {
-            const sentences: string[] = props.words.split(".\n\n");
-            const modifiedText = sentences.map((sentence: string): string => changeWord(sentence)).join(".\n\n");
+            const sentences: string[] = props.words.split(".\n");
+            const modifiedText = sentences.map((sentence: string): string => changeWord(sentence)).join(".\n");
             props.setWords(modifiedText);
             setIsChanged(true);
         }
         else {
-            const sentences: string[] = props.words.split(".\n\n");
-            const modifiedText = sentences.map((sentence: string): string => changeWord(sentence)).join(".\n\n");
+            const sentences: string[] = props.words.split(".\n");
+            const modifiedText = sentences.map((sentence: string): string => changeWord(sentence)).join(".\n");
             props.setWords(modifiedText);
             setIsChanged(false);
         }

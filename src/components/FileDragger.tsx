@@ -36,7 +36,7 @@ export function DropFile(props: DropFilesProps) {
       reader.onloadend = () => {
         if (typeof reader.result === "string") {
           const removedLineBreaks = reader.result.replace(/[\r\n]+/gm, " ");
-          accumWords += removedLineBreaks.split(".").join(".\n\n");
+          accumWords += removedLineBreaks.split(".").join(".\n");
           props.setWords(accumWords);
         }
       };
