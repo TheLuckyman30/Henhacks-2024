@@ -21,7 +21,7 @@ function App() {
           words={words}
           setWords={setWords}
         ></DropFile>
-        <p style={{display: "flex", whiteSpace: "pre-line", fontSize: "20px"}}>{words}</p>
+        <p style={{display: "flex", whiteSpace: "pre-line", fontSize: "20px"}} id="changeText11">{words}</p>
       </div>
     </div>
   );
