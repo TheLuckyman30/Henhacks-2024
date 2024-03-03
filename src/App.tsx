@@ -3,6 +3,7 @@ import "./App.css";
 import { DropFile } from "./components/FileDragger";
 import { MakeUppercase } from "./components/MakeUppercase";
 import { MakeLastUpper } from "./components/MakeLastUpper";
+import { LetterSpacing } from "./components/LetterSpacing";
 
 function App() {
   const [isDragOver, setisDragOver] = useState<boolean>(false);
@@ -28,6 +29,7 @@ function App() {
           words={words}
           setWords={setWords}
         ></MakeLastUpper>
+        <LetterSpacing></LetterSpacing>
         <DropFile
           isDragOver={isDragOver}
           setIsDragOver={setisDragOver}
@@ -37,7 +39,7 @@ function App() {
           setWords={setWords}
         ></DropFile>
         <p
-          style={{ display: "flex", whiteSpace: "pre-line", fontSize: "20px" }}
+          style={{ display: "flex", whiteSpace: "pre-line", fontSize: "20px" }} id="The-words"
         >
           {words}
         </p>
