@@ -38,11 +38,46 @@
 
   </head>
   <body>
+    <title >Change Text Color</title>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+  }
+  .color-selector {
+      margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+    <h1 id="changeText3">Change Text Color</h1>
+
+    <div class="color-selector">
+        <label for="textColor", id="changeText4">Select Text Color:</label>
+        <input type="color" id="textColor" name="textColor" onchange="changeTextColor(this.value)">
+    </div>
+
+    <p id="changeText">This is the text whose color will be changed.</p>
+    <p id="changeText2">This is the text whose color will be changed.</p>
+
+    <script>
+        function changeTextColor(color) {
+            // Set the text color to the selected color
+            document.getElementById('changeText').style.color = color;
+            document.getElementById('changeText2').style.color = color;
+            document.getElementById('changeText3').style.color = color;
+            document.getElementById('changeText4').style.color = color;
+
+        }
+    </script>
+</body>
     <h1>Change Background Color</h1>
     <div class="color-selector">
         <label for="color">Select Background Color:</label>
-        <input type="color" id="color" name="color">
+        <input type="color" id="color" name="color" >
     </div>
+    
     <div id="root"></div>
     <script>
         // Get the color input element
