@@ -17,10 +17,20 @@
   justify-content: center;
   font-size: var(--font-size, 16px);
   color: var(--text-color, #000000);
+  .App-Canvas{
+
+    width: 400px; /* Set the width */
+          height: 300px; /* Set the height */
+          border: 2px solid #000; /* Add a border */
+          background-color: #ffffff22; /* Set background color */
+          display: block; /* Make it a block element */
+          margin: 0 auto; /* Center the canvas horizontally */
+  }
 }
 
 .App-link {
   color: #61dafb;
 }
+
 
 

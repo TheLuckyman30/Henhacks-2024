@@ -62,7 +62,6 @@
 
     <script>
         function changeTextColor(color) {
-            // Set the text color to the selected color
 
             document.getElementById('changeText3').style.color = color;
             document.getElementById('changeText4').style.color = color;
@@ -101,17 +100,86 @@
     
     <div id="root"></div>
     <script>
-        // Get the color input element
         const colorInput = document.getElementById('color');
+        
 
-        // Add an event listener to listen for changes in the color input
         colorInput.addEventListener('input', function() {
-            // Get the selected color value
             const selectedColor = colorInput.value;
             
-            // Set the background color of the body to the selected color
             document.body.style.backgroundColor = selectedColor;
+            
         });
     </script>
 </body>
+<title>Canvas Eraser Tool</title>
+<style>
+    canvas {
+        border: 1px solid #000;
+    }
+</style>
+
+</head>
+<body>
+    <style>
+        .custom-button {
+            padding-top: 30px; /* Adjust the value to move the button higher */
+            
+        }
+    </style>
+
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <button onclick="toggleEraser()"; class="custom-button"; style="background-color: #ffffff3b; font-style: black; width: 50px; height: 50px; " >Eraser</button>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        let isErasing = false;
+
+        function toggleEraser() {
+            isErasing = !isErasing;
+            if (isErasing) {
+                // Sets the drawing color to match canvas bg color
+                
+                ctx.strokeStyle = document.body.style.backgroundColor;
+                
+                // Sets line width for eraser
+                ctx.lineWidth = 20; 
+            } else {
+                // Sets the drawing color to black (or any other desired color)
+                ctx.strokeStyle = '#000'; 
+                // Sets line width for drawing
+                ctx.lineWidth = 2; 
+            }
+        }
+
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+
+        function startDrawing(e) {
+            isDrawing = true;
+            [lastX, lastY] = [e.offsetX, e.offsetY];
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+            [lastX, lastY] = [e.offsetX, e.offsetY];
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+    </script>
+</body>
+
 </html>
