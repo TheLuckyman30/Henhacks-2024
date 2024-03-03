@@ -22,6 +22,8 @@ export function DropFile () {
         const userFiles = Array.from(event.dataTransfer.files);
         setFile(userFiles);
 
+        let accumWords: string = "";
+
         userFiles.forEach((file: File) => {
             const reader = new FileReader();
 
@@ -45,6 +47,6 @@ export function DropFile () {
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
         style={{
-            display: "flex", justifyContent: "center", alignItems: "center", height: "50px", width: "300px", border: "1px dotted", backgroundColor: isDragOver ? "lightgray" : "white", color: "black"}}>Drag files</div>
-            <p style={{display: "flex", justifyContent: "center", alignItems: "center", fontSize: "20px"}}>{words}</p></div>)
+            margin: "auto", display: "flex", justifyContent: "center", alignItems: "center", height: "50px", width: "300px", border: "1px dotted", backgroundColor: isDragOver ? "lightgray" : "white", color: "black"}}>Drag files</div>
+            <div style={{display: "flex", justifyContent: "center", alignItems: "center", fontSize: "20px", textAlign: "center"}}><p>{words}</p></div></div>)
 }
