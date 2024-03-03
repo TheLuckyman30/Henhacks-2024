@@ -6,6 +6,8 @@ import { MakeLastUpper } from "./components/MakeLastUpper";
 import { LetterSpacing } from "./components/LetterSpacing";
 import { AddNewLine } from "./components/AddNewLine";
 
+
+
 function App() {
   const [isDragOver, setisDragOver] = useState<boolean>(false);
   const [file, setFile] = useState<File[]>([]);
@@ -47,15 +49,9 @@ function App() {
           words={words}
           setWords={setWords}
         ></DropFile>
-        <p
-          style={{ display: "flex", whiteSpace: "pre-line", fontSize: "20px" }}
-          id="The-words"
-        >
-          {words}
-        </p>
+        <p style={{display: "flex", whiteSpace: "pre-line", fontSize: "20px"}} id="changeText11">{words}</p>
       </div>
     </div>
   );
 }
-
 export default App;
