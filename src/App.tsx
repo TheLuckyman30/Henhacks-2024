@@ -5,6 +5,7 @@ import { MakeUppercase } from "./components/MakeUppercase";
 import { MakeLastUpper } from "./components/MakeLastUpper";
 import { LetterSpacing } from "./components/LetterSpacing";
 import { AddNewLine } from "./components/AddNewLine";
+import { RemoveLine } from "./components/RemoveLine";
 
 function App() {
   const [isDragOver, setisDragOver] = useState<boolean>(false);
@@ -39,6 +40,14 @@ function App() {
           words={words}
           setWords={setWords}
         ></AddNewLine>
+        <RemoveLine
+          isDragOver={isDragOver}
+          setIsDragOver={setisDragOver}
+          file={file}
+          setFile={setFile}
+          words={words}
+          setWords={setWords}
+        ></RemoveLine>
         <DropFile
           isDragOver={isDragOver}
           setIsDragOver={setisDragOver}
