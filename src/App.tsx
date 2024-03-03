@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <div className="App-header" style={{ justifyContent: "flex-start" }}>
+      <div className="App-header" style={{ justifyContent: "flex-start", fontFamily: "Arial"}}>
         <MakeUppercase
           isDragOver={isDragOver}
           setIsDragOver={setisDragOver}
@@ -58,7 +58,7 @@ function App() {
           words={words}
           setWords={setWords}
         ></DropFile>
-        <p style={{display: "flex", whiteSpace: "pre-line", fontSize: "20px"}} id="changeText11">{words}</p>
+        <p style={{display: "flex", whiteSpace: "pre-line", fontSize: "20px", textAlign: "left"}} id="changeText11">{words}</p>
       </div>
     </div>
   );
