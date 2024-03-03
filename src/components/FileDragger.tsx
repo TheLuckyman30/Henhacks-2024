@@ -1,6 +1,6 @@
 import { DragEvent, useState } from "react";
 
-interface DropFilesProps {
+export interface DropFilesProps {
   isDragOver: boolean;
   setIsDragOver: (newIsDragOver: boolean) => void;
   file: File[];
@@ -36,7 +36,7 @@ export function DropFile(props: DropFilesProps) {
       reader.onloadend = () => {
         if (typeof reader.result === "string") {
           const removedLineBreaks = reader.result.replace(/[\r\n]+/gm, " ");
-          accumWords += removedLineBreaks.split(".").join(".\n\n");
+          accumWords += removedLineBreaks.split(".").join(".\n");
           props.setWords(accumWords);
         }
       };
