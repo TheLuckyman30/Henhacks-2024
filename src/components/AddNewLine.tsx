@@ -1,6 +1,8 @@
 import { Button } from "react-bootstrap";
 import { DropFilesProps } from "./FileDragger";
 
+//very interesting  
+
 export function AddNewLine (props: DropFilesProps) {
 
     function addLine () {
