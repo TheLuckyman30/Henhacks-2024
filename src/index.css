@@ -1,5 +1,10 @@
-body {
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-code {
+body, html {
+  margin: 0;
+  padding: 0;
 }
