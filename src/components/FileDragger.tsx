@@ -1,4 +1,4 @@
-import { DragEvent, useState } from "react";
+import { DragEvent} from "react";
 
 export interface DropFilesProps {
   isDragOver: boolean;
